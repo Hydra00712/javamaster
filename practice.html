@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Java - JavaMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracks.html">Learning Tracks</a></li>
+            <li><a href="practice.html" class="active">Practice</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Practice Java</h1>
+            <p>Sharpen your Java skills with our interactive code playground and practice exercises.</p>
+        </div>
+
+        <div class="practice-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-input" placeholder="Search exercises...">
+                        </div>
+                        <h3>Practice Categories</h3>
+                        <ul>
+                            <li><a href="#" class="active" data-category="all">All Exercises</a></li>
+                            <li><a href="#" data-category="beginner">Beginner</a></li>
+                            <li><a href="#" data-category="intermediate">Intermediate</a></li>
+                            <li><a href="#" data-category="advanced">Advanced</a></li>
+                        </ul>
+                        <h3>Topics</h3>
+                        <ul>
+                            <li><a href="#" data-topic="syntax">Basic Syntax</a></li>
+                            <li><a href="#" data-topic="variables">Variables & Data Types</a></li>
+                            <li><a href="#" data-topic="control-flow">Control Flow</a></li>
+                            <li><a href="#" data-topic="arrays">Arrays</a></li>
+                            <li><a href="#" data-topic="methods">Methods</a></li>
+                            <li><a href="#" data-topic="oop">Object-Oriented Programming</a></li>
+                            <li><a href="#" data-topic="collections">Collections</a></li>
+                            <li><a href="#" data-topic="exceptions">Exception Handling</a></li>
+                            <li><a href="#" data-topic="io">File I/O</a></li>
+                            <li><a href="#" data-topic="threads">Multithreading</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="playground-wrapper">
+                        <div class="playground-tabs">
+                            <div class="playground-tab active" data-tab="playground">Code Playground</div>
+                            <div class="playground-tab" data-tab="exercises">Practice Exercises</div>
+                            <div class="playground-tab" data-tab="challenges">Coding Challenges</div>
+                        </div>
+
+                        <div class="tab-content active" id="playground-tab">
+                            <div class="playground-description">
+                                <h2>Java Code Playground</h2>
+                                <p>Write, compile, and run Java code directly in your browser. This playground is perfect for experimenting with Java concepts and testing small code snippets.</p>
+                            </div>
+
+                            <div class="playground-container">
+                                <div class="playground-header">
+                                    <div class="playground-tabs">
+                                        <div class="playground-tab active">Main.java</div>
+                                        <button class="add-file-btn"><i class="fas fa-plus"></i> Add File</button>
+                                    </div>
+                                    <div class="playground-action">
+                                        <button class="run-button"><i class="fas fa-play"></i> Run Code</button>
+                                        <button class="reset-button"><i class="fas fa-undo"></i> Reset</button>
+                                    </div>
+                                </div>
+                                <div class="playground-editor">public class Main {
+    public static void main(String[] args) {
+        // Write your Java code here
+        System.out.println("Hello, Java Master!");
+        
+        // Try modifying the code and click Run
+        int sum = 0;
+        for (int i = 1; i <= 10; i++) {
+            sum += i;
+        }
+        System.out.println("Sum of numbers from 1 to 10: " + sum);
+    }
+}</div>
+                                <div class="playground-output"></div>
+                            </div>
+
+                            <div class="playground-templates">
+                                <h3>Code Templates</h3>
+                                <div class="template-grid">
+                                    <div class="template-card" data-template="hello-world">
+                                        <h4>Hello World</h4>
+                                        <p>Basic Hello World program</p>
+                                    </div>
+                                    <div class="template-card" data-template="variables">
+                                        <h4>Variables</h4>
+                                        <p>Examples of variable declarations</p>
+                                    </div>
+                                    <div class="template-card" data-template="loops">
+                                        <h4>Loops</h4>
+                                        <p>Different types of loops in Java</p>
+                                    </div>
+                                    <div class="template-card" data-template="arrays">
+                                        <h4>Arrays</h4>
+                                        <p>Working with arrays</p>
+                                    </div>
+                                    <div class="template-card" data-template="methods">
+                                        <h4>Methods</h4>
+                                        <p>Method declarations and calls</p>
+                                    </div>
+                                    <div class="template-card" data-template="classes">
+                                        <h4>Classes</h4>
+                                        <p>Basic class structure</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="exercises-tab">
+                            <div class="exercises-header">
+                                <h2>Practice Exercises</h2>
+                                <p>Strengthen your Java skills with these guided exercises. Each exercise includes instructions, starter code, and automated tests to check your solution.</p>
+                            </div>
+
+                            <div class="exercise-list">
+                                <div class="exercise-card" data-difficulty="beginner" data-topic="syntax">
+                                    <div class="exercise-header">
+                                        <h3>Hello World</h3>
+                                        <span class="difficulty beginner">Beginner</span>
+                                    </div>
+                                    <p>Write a simple Java program that prints "Hello, World!" to the console.</p>
+                                    <a href="exercises/hello-world.html" class="btn-primary">Start Exercise</a>
+                                </div>
+
+                                <div class="exercise-card" data-difficulty="beginner" data-topic="variables">
+                                    <div class="exercise-header">
+                                        <h3>Variable Swap</h3>
+                                        <span class="difficulty beginner">Beginner</span>
+                                    </div>
+                                    <p>Write a program that swaps the values of two variables without using a temporary variable.</p>
+                                    <a href="exercises/variable-swap.html" class="btn-primary">Start Exercise</a>
+                                </div>
+
+                                <div class="exercise-card" data-difficulty="beginner" data-topic="control-flow">
+                                    <div class="exercise-header">
+                                        <h3>FizzBuzz</h3>
+                                        <span class="difficulty beginner">Beginner</span>
+                                    </div>
+                                    <p>Implement the classic FizzBuzz problem: print numbers from 1 to 100, but for multiples of 3 print "Fizz" and for multiples of 5 print "Buzz".</p>
+                                    <a href="exercises/fizzbuzz.html" class="btn-primary">Start Exercise</a>
+                                </div>
+
+                                <div class="exercise-card" data-difficulty="intermediate" data-topic="arrays">
+                                    <div class="exercise-header">
+                                        <h3>Array Reversal</h3>
+                                        <span class="difficulty intermediate">Intermediate</span>
+                                    </div>
+                                    <p>Write a program that reverses an array in-place without using additional data structures.</p>
+                                    <a href="exercises/array-reversal.html" class="btn-primary">Start Exercise</a>
+                                </div>
+
+                                <div class="exercise-card" data-difficulty="intermediate" data-topic="methods">
+                                    <div class="exercise-header">
+                                        <h3>Recursive Factorial</h3>
+                                        <span class="difficulty intermediate">Intermediate</span>
+                                    </div>
+                                    <p>Implement a recursive method to calculate the factorial of a number.</p>
+                                    <a href="exercises/recursive-factorial.html" class="btn-primary">Start Exercise</a>
+                                </div>
+
+                                <div class="exercise-card" data-difficulty="advanced" data-topic="oop">
+                                    <div class="exercise-header">
+                                        <h3>Shape Hierarchy</h3>
+                                        <span class="difficulty advanced">Advanced</span>
+                                    </div>
+                                    <p>Create a class hierarchy for geometric shapes with appropriate inheritance and polymorphism.</p>
+                                    <a href="exercises/shape-hierarchy.html" class="btn-primary">Start Exercise</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="challenges-tab">
+                            <div class="challenges-header">
+                                <h2>Coding Challenges</h2>
+                                <p>Test your Java skills with these challenging problems. Solve them to earn badges and track your progress.</p>
+                            </div>
+
+                            <div class="challenge-list">
+                                <div class="challenge-card" data-difficulty="beginner">
+                                    <div class="challenge-header">
+                                        <h3>Palindrome Checker</h3>
+                                        <span class="difficulty beginner">Beginner</span>
+                                    </div>
+                                    <p>Write a function to check if a given string is a palindrome (reads the same backward as forward).</p>
+                                    <div class="challenge-meta">
+                                        <span><i class="fas fa-users"></i> 1,245 solved</span>
+                                        <span><i class="fas fa-star"></i> 4.5/5</span>
+                                    </div>
+                                    <a href="challenges/palindrome.html" class="btn-primary">Solve Challenge</a>
+                                </div>
+
+                                <div class="challenge-card" data-difficulty="intermediate">
+                                    <div class="challenge-header">
+                                        <h3>Anagram Detector</h3>
+                                        <span class="difficulty intermediate">Intermediate</span>
+                                    </div>
+                                    <p>Create a function that determines if two strings are anagrams of each other (contain the same characters in different orders).</p>
+                                    <div class="challenge-meta">
+                                        <span><i class="fas fa-users"></i> 876 solved</span>
+                                        <span><i class="fas fa-star"></i> 4.7/5</span>
+                                    </div>
+                                    <a href="challenges/anagram.html" class="btn-primary">Solve Challenge</a>
+                                </div>
+
+                                <div class="challenge-card" data-difficulty="intermediate">
+                                    <div class="challenge-header">
+                                        <h3>Binary Search</h3>
+                                        <span class="difficulty intermediate">Intermediate</span>
+                                    </div>
+                                    <p>Implement a binary search algorithm to find an element in a sorted array.</p>
+                                    <div class="challenge-meta">
+                                        <span><i class="fas fa-users"></i> 723 solved</span>
+                                        <span><i class="fas fa-star"></i> 4.6/5</span>
+                                    </div>
+                                    <a href="challenges/binary-search.html" class="btn-primary">Solve Challenge</a>
+                                </div>
+
+                                <div class="challenge-card" data-difficulty="advanced">
+                                    <div class="challenge-header">
+                                        <h3>Balanced Parentheses</h3>
+                                        <span class="difficulty advanced">Advanced</span>
+                                    </div>
+                                    <p>Write a function to determine if a string of parentheses, brackets, and braces is balanced.</p>
+                                    <div class="challenge-meta">
+                                        <span><i class="fas fa-users"></i> 512 solved</span>
+                                        <span><i class="fas fa-star"></i> 4.8/5</span>
+                                    </div>
+                                    <a href="challenges/balanced-parentheses.html" class="btn-primary">Solve Challenge</a>
+                                </div>
+
+                                <div class="challenge-card" data-difficulty="advanced">
+                                    <div class="challenge-header">
+                                        <h3>Dijkstra's Algorithm</h3>
+                                        <span class="difficulty advanced">Advanced</span>
+                                    </div>
+                                    <p>Implement Dijkstra's algorithm to find the shortest path in a weighted graph.</p>
+                                    <div class="challenge-meta">
+                                        <span><i class="fas fa-users"></i> 347 solved</span>
+                                        <span><i class="fas fa-star"></i> 4.9/5</span>
+                                    </div>
+                                    <a href="challenges/dijkstra.html" class="btn-primary">Solve Challenge</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tracks.html">Learning Tracks</a></li>
+                    <li><a href="practice.html">Practice</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.playground-tab[data-tab]');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Hide all tab content
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab') + '-tab';
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Template selection functionality
+            const templateCards = document.querySelectorAll('.template-card');
+            const editor = document.querySelector('.playground-editor');
+            
+            const templates = {
+                'hello-world': `public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}`,
+                'variables': `public class Main {
+    public static void main(String[] args) {
+        // Primitive data types
+        int number = 10;
+        double decimal = 3.14;
+        boolean flag = true;
+        char letter = 'A';
+        
+        // Reference data type
+        String message = "Java is awesome!";
+        
+        // Printing variables
+        System.out.println("number: " + number);
+        System.out.println("decimal: " + decimal);
+        System.out.println("flag: " + flag);
+        System.out.println("letter: " + letter);
+        System.out.println("message: " + message);
+    }
+}`,
+                'loops': `public class Main {
+    public static void main(String[] args) {
+        // For loop
+        System.out.println("For loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Iteration " + i);
+        }
+        
+        // While loop
+        System.out.println("\\nWhile loop:");
+        int count = 1;
+        while (count <= 5) {
+            System.out.println("Count: " + count);
+            count++;
+        }
+        
+        // Do-while loop
+        System.out.println("\\nDo-while loop:");
+        int j = 1;
+        do {
+            System.out.println("Value: " + j);
+            j++;
+        } while (j <= 5);
+        
+        // Enhanced for loop with array
+        System.out.println("\\nEnhanced for loop:");
+        int[] numbers = {1, 2, 3, 4, 5};
+        for (int num : numbers) {
+            System.out.println("Number: " + num);
+        }
+    }
+}`,
+                'arrays': `public class Main {
+    public static void main(String[] args) {
+        // Declaring and initializing arrays
+        int[] numbers = {10, 20, 30, 40, 50};
+        String[] fruits = {"Apple", "Banana", "Orange", "Mango"};
+        
+        // Accessing array elements
+        System.out.println("First number: " + numbers[0]);
+        System.out.println("Second fruit: " + fruits[1]);
+        
+        // Array length
+        System.out.println("Number of elements in numbers array: " + numbers.length);
+        
+        // Iterating through arrays
+        System.out.println("\\nAll numbers:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println("numbers[" + i + "] = " + numbers[i]);
+        }
+        
+        System.out.println("\\nAll fruits:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+        
+        // Multidimensional array
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+        
+        System.out.println("\\nMatrix elements:");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}`,
+                'methods': `public class Main {
+    public static void main(String[] args) {
+        // Calling methods
+        greet("Java Master");
+        
+        int sum = add(5, 3);
+        System.out.println("Sum: " + sum);
+        
+        double area = calculateArea(7.5);
+        System.out.println("Area of circle: " + area);
+        
+        int factorial = factorial(5);
+        System.out.println("Factorial of 5: " + factorial);
+    }
+    
+    // Method with no return value (void)
+    public static void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+    
+    // Method with parameters and return value
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    
+    // Method with double parameter and return value
+    public static double calculateArea(double radius) {
+        return Math.PI * radius * radius;
+    }
+    
+    // Recursive method
+    public static int factorial(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+}`,
+                'classes': `// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects
+        Person person1 = new Person("John", 25);
+        Person person2 = new Person("Alice", 30);
+        
+        // Using object methods
+        person1.introduce();
+        person2.introduce();
+        
+        // Accessing and modifying object properties
+        person1.setAge(26);
+        System.out.println(person1.getName() + " is now " + person1.getAge() + " years old.");
+    }
+}
+
+// Person class
+class Person {
+    // Instance variables (fields)
+    private String name;
+    private int age;
+    
+    // Constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Methods
+    public void introduce() {
+        System.out.println("Hi, I'm " + name + " and I'm " + age + " years old.");
+    }
+    
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int age) {
+        this.age = age;
+    }
+}`
+            };
+            
+            templateCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const templateName = this.getAttribute('data-template');
+                    if (templates[templateName]) {
+                        editor.textContent = templates[templateName];
+                    }
+                });
+            });
+            
+            // Filter exercises by category and topic
+            const categoryLinks = document.querySelectorAll('.topic-nav a[data-category]');
+            const topicLinks = document.querySelectorAll('.topic-nav a[data-topic]');
+            const exerciseCards = document.querySelectorAll('.exercise-card');
+            
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all category links
+                    categoryLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Show/hide exercise cards based on category
+                    exerciseCards.forEach(card => {
+                        if (category === 'all' || card.getAttribute('data-difficulty') === category) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            topicLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all topic links
+                    topicLinks.forEach(l => l.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const topic = this.getAttribute('data-topic');
+                    
+                    // Show/hide exercise cards based on topic
+                    exerciseCards.forEach(card => {
+                        if (card.getAttribute('data-topic') === topic) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

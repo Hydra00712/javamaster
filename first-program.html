@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your First Java Program - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Your First Java Program</h1>
+            <p>Learn how to write, compile, and run a simple Java program.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%;"></div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <ul>
+                            <li><a href="introduction.html">Introduction to Java</a></li>
+                            <li><a href="setup.html">Setting Up Your Development Environment</a></li>
+                            <li><a href="first-program.html" class="active">Your First Java Program</a></li>
+                            <li><a href="syntax.html">Java Syntax Basics</a></li>
+                            <li><a href="comments.html">Comments and Documentation</a></li>
+                        </ul>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#hello-world">The "Hello, World!" Program</a></li>
+                            <li><a href="#structure">Understanding the Program Structure</a></li>
+                            <li><a href="#compile-run">Compiling and Running</a></li>
+                            <li><a href="#common-errors">Common Errors for Beginners</a></li>
+                            <li><a href="#practice">Practice Exercises</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="lesson-content">
+                        <section id="hello-world">
+                            <h2>The "Hello, World!" Program</h2>
+                            <p>The "Hello, World!" program is traditionally the first program that programmers write when learning a new language. It's a simple program that outputs the text "Hello, World!" to the screen.</p>
+                            
+                            <p>Here's what a basic Hello World program looks like in Java:</p>
+                            
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+                                </pre>
+                            </div>
+                            
+                            <p>Let's save this code in a file named <code>HelloWorld.java</code>. The filename must match the class name exactly, including capitalization.</p>
+                        </section>
+
+                        <section id="structure">
+                            <h2>Understanding the Program Structure</h2>
+                            <p>Let's break down the "Hello, World!" program to understand its structure:</p>
+                            
+                            <div class="code-explanation">
+                                <div class="code-line">
+                                    <code>public class HelloWorld {</code>
+                                    <div class="explanation">
+                                        <p>This line declares a class named HelloWorld. In Java, everything must be inside a class. The public keyword means this class is accessible from other classes.</p>
+                                    </div>
+                                </div>
+                                <div class="code-line">
+                                    <code>public static void main(String[] args) {</code>
+                                    <div class="explanation">
+                                        <p>This is the main method, which is the entry point for Java applications. When you run a Java program, it starts executing from this method.</p>
+                                        <ul>
+                                            <li><code>public</code>: This method is accessible from outside the class.</li>
+                                            <li><code>static</code>: This method belongs to the class rather than an instance of the class.</li>
+                                            <li><code>void</code>: This method doesn't return any value.</li>
+                                            <li><code>main</code>: The name of the method, which must be exactly "main" for the entry point.</li>
+                                            <li><code>String[] args</code>: The method accepts an array of strings as a parameter, which can contain command-line arguments.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="code-line">
+                                    <code>System.out.println("Hello, World!");</code>
+                                    <div class="explanation">
+                                        <p>This line displays the text "Hello, World!" to the console.</p>
+                                        <ul>
+                                            <li><code>System</code>: A class that contains useful members related to the system.</li>
+                                            <li><code>out</code>: A static member of the System class, representing the standard output stream.</li>
+                                            <li><code>println()</code>: A method of the PrintStream class (which out is an instance of) that prints a line of text to the console.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="code-line">
+                                    <code>}</code>
+                                    <div class="explanation">
+                                        <p>This closing brace marks the end of the main method.</p>
+                                    </div>
+                                </div>
+                                <div class="code-line">
+                                    <code>}</code>
+                                    <div class="explanation">
+                                        <p>This closing brace marks the end of the HelloWorld class.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="compile-run">
+                            <h2>Compiling and Running Your Java Program</h2>
+                            <p>To run a Java program, you need to first compile it and then execute it. Here are the steps:</p>
+                            
+                            <div class="steps-container">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Create the Java File</h4>
+                                        <p>Save the code in a file named <code>HelloWorld.java</code>. Remember, the filename must match the class name.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Open Command Prompt or Terminal</h4>
+                                        <p>Navigate to the directory where you saved the file using the <code>cd</code> command.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Compile the Program</h4>
+                                        <p>Type <code>javac HelloWorld.java</code> and press Enter. This will compile your Java source code into bytecode (a .class file).</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Run the Program</h4>
+                                        <p>Type <code>java HelloWorld</code> (note: no .java extension) and press Enter. This will execute your program.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> Note</h4>
+                                <p>Notice that we use <code>javac</code> to compile the program and <code>java</code> to run it. The <code>javac</code> command creates a file named <code>HelloWorld.class</code>, which contains the bytecode that the Java Virtual Machine (JVM) will execute.</p>
+                            </div>
+                            
+                            <h3>Using an IDE</h3>
+                            <p>If you're using an IDE like IntelliJ IDEA or Eclipse, the process is simpler:</p>
+                            <ol>
+                                <li>Create a new Java project</li>
+                                <li>Create a new Java class named HelloWorld</li>
+                                <li>Enter the code in the editor</li>
+                                <li>Click the Run button or press Ctrl+Shift+F10 (IntelliJ) or Ctrl+F11 (Eclipse)</li>
+                            </ol>
+                        </section>
+
+                        <section id="common-errors">
+                            <h2>Common Errors for Beginners</h2>
+                            <p>Here are some common errors that beginners might encounter when writing their first Java program:</p>
+                            
+                            <div class="error-list">
+                                <div class="error-item">
+                                    <h4>Incorrect Capitalization</h4>
+                                    <p>Java is case-sensitive. <code>helloworld</code>, <code>HelloWorld</code>, and <code>HELLOWORLD</code> are all different identifiers in Java.</p>
+                                    <div class="code-snippet error">
+                                        <span class="language-badge">Java</span>
+                                        <pre>
+public class helloworld {  // Error! File name should be helloworld.java
+    public static void Main(String[] args) {  // Error! Method name should be main, not Main
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="error-item">
+                                    <h4>Missing Semicolons</h4>
+                                    <p>In Java, statements must end with a semicolon (;).</p>
+                                    <div class="code-snippet error">
+                                        <span class="language-badge">Java</span>
+                                        <pre>
+System.out.println("Hello, World!")  // Error! Missing semicolon
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="error-item">
+                                    <h4>Mismatched Braces</h4>
+                                    <p>Every opening brace <code>{</code> must have a corresponding closing brace <code>}</code>.</p>
+                                    <div class="code-snippet error">
+                                        <span class="language-badge">Java</span>
+                                        <pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    // Error! Missing closing brace for the class
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="error-item">
+                                    <h4>Incorrect File Name</h4>
+                                    <p>The file name must match the class name exactly, including capitalization, and have a .java extension.</p>
+                                    <p>For example, the class <code>HelloWorld</code> should be in a file named <code>HelloWorld.java</code>, not <code>helloworld.java</code> or <code>HelloWorld.txt</code>.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="practice">
+                            <h2>Practice Exercises</h2>
+                            <p>Now it's your turn to practice! Try these exercises to reinforce what you've learned:</p>
+                            
+                            <div class="exercise">
+                                <h3>Exercise 1: Modify the Hello World Program</h3>
+                                <p>Modify the Hello World program to display your name instead of "Hello, World!".</p>
+                                <div class="code-snippet">
+                                    <span class="language-badge">Java</span>
+                                    <button class="copy-button">Copy</button>
+                                    <pre>
+public class HelloName {
+    public static void main(String[] args) {
+        // Your code here
+    }
+}
+                                    </pre>
+                                </div>
+                            </div>
+                            
+                            <div class="exercise">
+                                <h3>Exercise 2: Multiple Print Statements</h3>
+                                <p>Write a program that prints multiple lines to the console.</p>
+                                <div class="code-snippet">
+                                    <span class="language-badge">Java</span>
+                                    <button class="copy-button">Copy</button>
+                                    <pre>
+public class MultipleLines {
+    public static void main(String[] args) {
+        // Your code here - print at least 3 different lines
+    }
+}
+                                    </pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="interactive-element">
+                            <h3>Check Your Understanding</h3>
+                            <div class="quiz-container mini-quiz">
+                                <div class="quiz-question active">
+                                    <h3>What is the correct command to compile a Java program named HelloWorld.java?</h3>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option">java HelloWorld.java</div>
+                                        <div class="quiz-option" data-correct="true">javac HelloWorld.java</div>
+                                        <div class="quiz-option">run HelloWorld.java</div>
+                                        <div class="quiz-option">compile HelloWorld.java</div>
+                                    </div>
+                                </div>
+                                <div class="quiz-results" style="display: none;"></div>
+                                <div class="quiz-navigation">
+                                    <button class="btn-primary quiz-submit">Submit Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playground-container">
+                            <div class="playground-header">
+                                <div class="playground-tabs">
+                                    <div class="playground-tab active">HelloWorld.java</div>
+                                </div>
+                                <div class="playground-action">
+                                    <button class="run-button">Run Code</button>
+                                    <button class="reset-button">Reset</button>
+                                </div>
+                            </div>
+                            <div class="playground-editor">public class HelloWorld {
+    public static void main(String[] args) {
+        // Try modifying this line to print a different message
+        System.out.println("Hello, World!");
+    }
+}</div>
+                            <div class="playground-output"></div>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>A Java program must be written inside a class.</li>
+                                <li>The main method is the entry point for Java applications.</li>
+                                <li>Java is case-sensitive, so be careful with capitalization.</li>
+                                <li>The file name must match the class name and have a .java extension.</li>
+                                <li>Use <code>javac</code> to compile and <code>java</code> to run your program.</li>
+                                <li>Common errors include missing semicolons, mismatched braces, and incorrect capitalization.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <a href="setup.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Previous Lesson</a>
+                            <a href="syntax.html" class="btn-primary">Next Lesson: Java Syntax Basics <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Mark this lesson as completed when the user reaches the end
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track progress when user scrolls to the bottom of the lesson
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                    trackProgress('b1-3', 'beginner');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

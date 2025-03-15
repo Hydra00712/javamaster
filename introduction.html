@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Java - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Introduction to Java</h1>
+            <p>Learn about the history, features, and applications of Java programming language.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 20%;"></div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <ul>
+                            <li><a href="introduction.html" class="active">Introduction to Java</a></li>
+                            <li><a href="setup.html">Setting Up Your Development Environment</a></li>
+                            <li><a href="first-program.html">Your First Java Program</a></li>
+                            <li><a href="syntax.html">Java Syntax Basics</a></li>
+                            <li><a href="comments.html">Comments and Documentation</a></li>
+                        </ul>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#what-is-java">What is Java?</a></li>
+                            <li><a href="#history">History of Java</a></li>
+                            <li><a href="#features">Key Features</a></li>
+                            <li><a href="#applications">Applications of Java</a></li>
+                            <li><a href="#jvm">Java Virtual Machine</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="lesson-content">
+                        <section id="what-is-java">
+                            <h2>What is Java?</h2>
+                            <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible. It is a general-purpose programming language intended to let application developers <strong>write once, run anywhere (WORA)</strong>, meaning that compiled Java code can run on all platforms that support Java without the need for recompilation.</p>
+                            
+                            <p>Java applications are typically compiled to bytecode that can run on any Java Virtual Machine (JVM) regardless of the underlying computer architecture.</p>
+                        </section>
+
+                        <section id="history">
+                            <h2>History of Java</h2>
+                            <p>Java was originally developed by James Gosling at Sun Microsystems (which has since been acquired by Oracle Corporation) and released in 1995 as a core component of Sun Microsystems' Java platform.</p>
+                            
+                            <p>The language was initially called Oak after an oak tree that stood outside Gosling's office. Later the project went by the name Green and was finally renamed Java, from Java coffee.</p>
+                            
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-date">1991</div>
+                                    <div class="timeline-content">
+                                        <h4>Green Project</h4>
+                                        <p>James Gosling, Mike Sheridan, and Patrick Naughton initiated the Java language project.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">1995</div>
+                                    <div class="timeline-content">
+                                        <h4>First Public Implementation</h4>
+                                        <p>Java 1.0 was released with the slogan "Write Once, Run Anywhere".</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2010</div>
+                                    <div class="timeline-content">
+                                        <h4>Oracle Acquisition</h4>
+                                        <p>Oracle Corporation acquired Sun Microsystems and took ownership of Java.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2014</div>
+                                    <div class="timeline-content">
+                                        <h4>Java 8</h4>
+                                        <p>Major release with lambda expressions, functional interfaces, and stream API.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-date">2021</div>
+                                    <div class="timeline-content">
+                                        <h4>Java 17 (LTS)</h4>
+                                        <p>Long-term support release with various enhancements and new features.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="features">
+                            <h2>Key Features of Java</h2>
+                            <p>Java has several key features that have contributed to its popularity and longevity:</p>
+                            
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-laptop-code"></i> Platform Independence</h4>
+                                    <p>Java code can run on any device that has a Java Virtual Machine (JVM), regardless of the underlying hardware or operating system.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-object-group"></i> Object-Oriented</h4>
+                                    <p>Java is based on the object-oriented programming paradigm, which helps organize code into reusable, modular components.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-shield-alt"></i> Robust and Secure</h4>
+                                    <p>Java has strong memory management, exception handling, and type checking mechanisms that make it robust. Its security features make it suitable for network applications.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-cogs"></i> Multithreaded</h4>
+                                    <p>Java has built-in support for multithreaded programming, allowing developers to create applications that can perform multiple tasks simultaneously.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-globe"></i> Distributed</h4>
+                                    <p>Java is designed to work in distributed environments like the internet, with extensive networking capabilities.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h4><i class="fas fa-broom"></i> Automatic Memory Management</h4>
+                                    <p>Java uses garbage collection to automatically manage memory, relieving developers from manual memory allocation and deallocation.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="applications">
+                            <h2>Applications of Java</h2>
+                            <p>Java is used in a wide variety of applications across different domains:</p>
+                            
+                            <ul class="applications-list">
+                                <li><strong>Enterprise Applications:</strong> Large-scale, distributed systems in enterprises often use Java for its reliability and scalability.</li>
+                                <li><strong>Mobile Applications:</strong> Android apps are primarily developed using Java.</li>
+                                <li><strong>Web Applications:</strong> Java is used for server-side web development with technologies like Servlets, JSP, and frameworks like Spring and Struts.</li>
+                                <li><strong>Desktop GUI Applications:</strong> Java provides frameworks like Swing and JavaFX for building desktop applications.</li>
+                                <li><strong>Embedded Systems:</strong> Java is used in embedded devices and IoT applications.</li>
+                                <li><strong>Scientific Applications:</strong> Java is used in scientific computing and research applications.</li>
+                                <li><strong>Big Data Technologies:</strong> Many big data processing frameworks like Hadoop and Spark are written in Java.</li>
+                            </ul>
+                        </section>
+
+                        <section id="jvm">
+                            <h2>Java Virtual Machine (JVM)</h2>
+                            <p>The Java Virtual Machine (JVM) is an abstract computing machine that enables a computer to run Java programs as well as programs written in other languages that are compiled to Java bytecode.</p>
+                            
+                            <p>The JVM performs the following main tasks:</p>
+                            <ul>
+                                <li>Loads code</li>
+                                <li>Verifies code</li>
+                                <li>Executes code</li>
+                                <li>Provides runtime environment</li>
+                            </ul>
+                            
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// Java code is compiled into bytecode
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+
+// The bytecode is then executed by the JVM
+// javac HelloWorld.java    (Compiles to HelloWorld.class)
+// java HelloWorld          (Runs the bytecode using JVM)
+                                </pre>
+                            </div>
+                            
+                            <p>The JVM architecture consists of several components:</p>
+                            <ol>
+                                <li><strong>ClassLoader:</strong> Loads class files into memory</li>
+                                <li><strong>Execution Engine:</strong> Executes the bytecode</li>
+                                <li><strong>Garbage Collector:</strong> Manages memory automatically</li>
+                                <li><strong>JIT Compiler:</strong> Improves performance by compiling bytecode to native machine code</li>
+                                <li><strong>Runtime Data Areas:</strong> Memory areas used by the JVM while executing a program</li>
+                            </ol>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> Did You Know?</h4>
+                                <p>The JVM specification doesn't dictate how a JVM should be implemented. This allows for different implementations like HotSpot (Oracle), OpenJ9 (Eclipse), and GraalVM, each with its own performance characteristics and features.</p>
+                            </div>
+                        </section>
+
+                        <div class="interactive-element">
+                            <h3>Check Your Understanding</h3>
+                            <div class="quiz-container mini-quiz">
+                                <div class="quiz-question active">
+                                    <h3>What does WORA stand for in the context of Java?</h3>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="true">Write Once, Run Anywhere</div>
+                                        <div class="quiz-option">Write Once, Read Always</div>
+                                        <div class="quiz-option">Write Original, Run Automated</div>
+                                        <div class="quiz-option">World Object Runtime Architecture</div>
+                                    </div>
+                                </div>
+                                <div class="quiz-results" style="display: none;"></div>
+                                <div class="quiz-navigation">
+                                    <button class="btn-primary quiz-submit">Submit Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playground-container">
+                            <div class="playground-header">
+                                <div class="playground-tabs">
+                                    <div class="playground-tab active">HelloWorld.java</div>
+                                </div>
+                                <div class="playground-action">
+                                    <button class="run-button">Run Code</button>
+                                    <button class="reset-button">Reset</button>
+                                </div>
+                            </div>
+                            <div class="playground-editor">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java Master!");
+    }
+}</div>
+                            <div class="playground-output"></div>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>Java is a high-level, object-oriented programming language designed for platform independence.</li>
+                                <li>It was developed by James Gosling at Sun Microsystems and released in 1995.</li>
+                                <li>Key features include platform independence, object-orientation, robustness, and automatic memory management.</li>
+                                <li>Java is used in various domains including enterprise applications, mobile development, web applications, and more.</li>
+                                <li>The Java Virtual Machine (JVM) enables Java's "Write Once, Run Anywhere" capability.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <a href="../tracks.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Back to Module</a>
+                            <a href="setup.html" class="btn-primary">Next Lesson: Setting Up Your Development Environment <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Mark this lesson as completed when the user reaches the end
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track progress when user scrolls to the bottom of the lesson
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                    trackProgress('b1-1', 'beginner');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

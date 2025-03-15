@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up Your Development Environment - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Setting Up Your Development Environment</h1>
+            <p>Learn how to install and configure the tools needed for Java development.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 40%;"></div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <ul>
+                            <li><a href="introduction.html">Introduction to Java</a></li>
+                            <li><a href="setup.html" class="active">Setting Up Your Development Environment</a></li>
+                            <li><a href="first-program.html">Your First Java Program</a></li>
+                            <li><a href="syntax.html">Java Syntax Basics</a></li>
+                            <li><a href="comments.html">Comments and Documentation</a></li>
+                        </ul>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#jdk">Installing the JDK</a></li>
+                            <li><a href="#ide">Choosing an IDE</a></li>
+                            <li><a href="#setup-intellij">Setting Up IntelliJ IDEA</a></li>
+                            <li><a href="#setup-eclipse">Setting Up Eclipse</a></li>
+                            <li><a href="#path">Configuring Environment Variables</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="lesson-content">
+                        <section id="jdk">
+                            <h2>Installing the Java Development Kit (JDK)</h2>
+                            <p>The Java Development Kit (JDK) is a software development environment used for developing Java applications. It includes the Java Runtime Environment (JRE), an interpreter/loader (Java), a compiler (javac), an archiver (jar), a documentation generator (Javadoc), and other tools needed for Java development.</p>
+                            
+                            <div class="steps-container">
+                                <h3>Steps to Install the JDK:</h3>
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Download the JDK</h4>
+                                        <p>Visit the <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Oracle JDK download page</a> or <a href="https://adoptopenjdk.net/" target="_blank">AdoptOpenJDK</a> for an open-source alternative.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Select Your Operating System</h4>
+                                        <p>Choose the JDK version appropriate for your operating system (Windows, macOS, or Linux).</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Run the Installer</h4>
+                                        <p>Execute the downloaded installer and follow the installation instructions.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Verify Installation</h4>
+                                        <p>Open a terminal or command prompt and type <code>java -version</code> to verify that Java is installed correctly.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="ide">
+                            <h2>Choosing an Integrated Development Environment (IDE)</h2>
+                            <p>An IDE provides comprehensive facilities for Java development. Here are some popular Java IDEs to consider:</p>
+                            
+                            <div class="comparison-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>IDE</th>
+                                            <th>Pros</th>
+                                            <th>Cons</th>
+                                            <th>Best For</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>IntelliJ IDEA</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Robust code assistance</li>
+                                                    <li>Excellent refactoring tools</li>
+                                                    <li>Advanced debugger</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Full version is not free</li>
+                                                    <li>Requires more system resources</li>
+                                                </ul>
+                                            </td>
+                                            <td>Professional developers, complex projects</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Eclipse</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Free and open-source</li>
+                                                    <li>Extensive plugin ecosystem</li>
+                                                    <li>Widely used in industry</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Can be slower than other IDEs</li>
+                                                    <li>UI is less intuitive</li>
+                                                </ul>
+                                            </td>
+                                            <td>Students, enterprise development</td>
+                                        </tr>
+                                        <tr>
+                                            <td>NetBeans</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Free and open-source</li>
+                                                    <li>Official IDE for Java</li>
+                                                    <li>Built-in GUI builder</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Can be resource-intensive</li>
+                                                    <li>Less extensive plugins</li>
+                                                </ul>
+                                            </td>
+                                            <td>Beginners, GUI applications</td>
+                                        </tr>
+                                        <tr>
+                                            <td>VS Code</td>
+                                            <td>
+                                                <ul>
+                                                    <li>Lightweight</li>
+                                                    <li>Extensions for Java</li>
+                                                    <li>Modern UI</li>
+                                                </ul>
+                                            </td>
+                                            <td>
+                                                <ul>
+                                                    <li>Not a full Java IDE by default</li>
+                                                    <li>Requires extensions setup</li>
+                                                </ul>
+                                            </td>
+                                            <td>Lightweight development, multi-language projects</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="setup-intellij">
+                            <h2>Setting Up IntelliJ IDEA</h2>
+                            <p>IntelliJ IDEA is one of the most popular Java IDEs. Here's how to set it up:</p>
+                            
+                            <div class="steps-container">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Download IntelliJ IDEA</h4>
+                                        <p>Visit the <a href="https://www.jetbrains.com/idea/download/" target="_blank">JetBrains website</a> and download either the Community (free) or Ultimate (paid) edition.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Install the IDE</h4>
+                                        <p>Run the installer and follow the installation wizard.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Launch and Configure</h4>
+                                        <p>Open IntelliJ IDEA and configure it with your preferred settings (theme, keymap, etc.).</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Set Up the JDK</h4>
+                                        <p>Go to File > Project Structure > SDKs and add your installed JDK if it's not automatically detected.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> Tip</h4>
+                                <p>IntelliJ IDEA offers a wide range of plugins. Consider installing the "Checkstyle" plugin for code quality checks and "SonarLint" for static code analysis.</p>
+                            </div>
+                        </section>
+
+                        <section id="setup-eclipse">
+                            <h2>Setting Up Eclipse</h2>
+                            <p>Eclipse is a free, open-source IDE that's popular among Java developers. Here's how to set it up:</p>
+                            
+                            <div class="steps-container">
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Download Eclipse</h4>
+                                        <p>Visit the <a href="https://www.eclipse.org/downloads/" target="_blank">Eclipse download page</a> and download the Eclipse IDE for Java Developers.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Extract the Archive</h4>
+                                        <p>Unlike many other programs, Eclipse doesn't have an installer. Simply extract the downloaded archive to your preferred location.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Launch Eclipse</h4>
+                                        <p>Run the eclipse.exe (Windows) or Eclipse application (macOS) file.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Configure the Workspace</h4>
+                                        <p>Choose a workspace directory when prompted. This is where your projects will be stored.</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Set Up the JDK</h4>
+                                        <p>Go to Window > Preferences > Java > Installed JREs and add your installed JDK if it's not already there.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="path">
+                            <h2>Configuring Environment Variables</h2>
+                            <p>Setting environment variables allows you to run Java commands from any directory in the command prompt or terminal.</p>
+                            
+                            <div class="tabs">
+                                <div class="tab-headers">
+                                    <div class="tab-header active" data-tab="windows">Windows</div>
+                                    <div class="tab-header" data-tab="macos">macOS</div>
+                                    <div class="tab-header" data-tab="linux">Linux</div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="windows">
+                                        <h3>Setting PATH on Windows</h3>
+                                        <ol>
+                                            <li>Right-click on "This PC" or "My Computer" and select "Properties"</li>
+                                            <li>Click on "Advanced system settings"</li>
+                                            <li>Click on "Environment Variables"</li>
+                                            <li>Under "System variables", find and select "Path", then click "Edit"</li>
+                                            <li>Click "New" and add the path to the JDK bin folder (e.g., <code>C:\Program Files\Java\jdk-17\bin</code>)</li>
+                                            <li>Click "OK" to close all dialogs</li>
+                                        </ol>
+                                    </div>
+                                    <div class="tab-pane" id="macos">
+                                        <h3>Setting PATH on macOS</h3>
+                                        <ol>
+                                            <li>Open Terminal</li>
+                                            <li>Open your shell profile file: <code>nano ~/.bash_profile</code> or <code>nano ~/.zshrc</code></li>
+                                            <li>Add the following line: <code>export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/bin</code></li>
+                                            <li>Press Ctrl+O to save, then Ctrl+X to exit</li>
+                                            <li>Reload the profile: <code>source ~/.bash_profile</code> or <code>source ~/.zshrc</code></li>
+                                        </ol>
+                                    </div>
+                                    <div class="tab-pane" id="linux">
+                                        <h3>Setting PATH on Linux</h3>
+                                        <ol>
+                                            <li>Open Terminal</li>
+                                            <li>Open your shell profile file: <code>nano ~/.bashrc</code></li>
+                                            <li>Add the following line: <code>export PATH=$PATH:/usr/lib/jvm/jdk-17/bin</code></li>
+                                            <li>Press Ctrl+O to save, then Ctrl+X to exit</li>
+                                            <li>Reload the profile: <code>source ~/.bashrc</code></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="verification">
+                                <h3>Verifying Your Setup</h3>
+                                <p>To verify that your environment variables are set correctly, open a new terminal or command prompt window and run:</p>
+                                <div class="code-snippet">
+                                    <span class="language-badge">Command</span>
+                                    <button class="copy-button">Copy</button>
+                                    <pre>java -version
+javac -version</pre>
+                                </div>
+                                <p>Both commands should display the version of the JDK you installed.</p>
+                            </div>
+                        </section>
+
+                        <div class="interactive-element">
+                            <h3>Check Your Understanding</h3>
+                            <div class="quiz-container mini-quiz">
+                                <div class="quiz-question active">
+                                    <h3>What is the main purpose of the JDK?</h3>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option" data-correct="true">To develop Java applications</div>
+                                        <div class="quiz-option">To only run Java applications</div>
+                                        <div class="quiz-option">To design user interfaces</div>
+                                        <div class="quiz-option">To manage databases</div>
+                                    </div>
+                                </div>
+                                <div class="quiz-results" style="display: none;"></div>
+                                <div class="quiz-navigation">
+                                    <button class="btn-primary quiz-submit">Submit Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>The JDK (Java Development Kit) is essential for Java development and includes tools like the compiler (javac) and JRE.</li>
+                                <li>Popular Java IDEs include IntelliJ IDEA, Eclipse, NetBeans, and Visual Studio Code with extensions.</li>
+                                <li>Setting up environment variables allows you to run Java commands from any directory.</li>
+                                <li>It's important to verify your installation by checking Java and Javac versions in the terminal.</li>
+                                <li>Choose an IDE that fits your needs based on your experience level and project requirements.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <a href="introduction.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Previous Lesson</a>
+                            <a href="first-program.html" class="btn-primary">Next Lesson: Your First Java Program <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Mark this lesson as completed when the user reaches the end
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track progress when user scrolls to the bottom of the lesson
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                    trackProgress('b1-2', 'beginner');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

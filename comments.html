@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments and Documentation - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Comments and Documentation</h1>
+            <p>Learn how to properly document your Java code using comments and Javadoc.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <ul>
+                            <li><a href="introduction.html">Introduction to Java</a></li>
+                            <li><a href="setup.html">Setting Up Your Development Environment</a></li>
+                            <li><a href="first-program.html">Your First Java Program</a></li>
+                            <li><a href="syntax.html">Java Syntax Basics</a></li>
+                            <li><a href="comments.html" class="active">Comments and Documentation</a></li>
+                        </ul>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#why-comment">Why Comment Your Code</a></li>
+                            <li><a href="#comment-types">Types of Comments</a></li>
+                            <li><a href="#javadoc">Javadoc Documentation</a></li>
+                            <li><a href="#best-practices">Best Practices</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="lesson-content">
+                        <section id="why-comment">
+                            <h2>Why Comment Your Code?</h2>
+                            <p>Comments are non-executable statements that you add to make your code more readable and understandable. They are ignored by the compiler and are meant for human readers of your code. Proper commenting has several benefits:</p>
+                            
+                            <div class="benefits-container">
+                                <div class="benefit-item">
+                                    <i class="fas fa-users"></i>
+                                    <h3>Enhances Collaboration</h3>
+                                    <p>Well-commented code makes it easier for team members to understand and work with your code.</p>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-clock"></i>
+                                    <h3>Saves Time</h3>
+                                    <p>When you revisit your code after a long time, comments help you quickly understand what it does and why.</p>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-bug"></i>
+                                    <h3>Aids Debugging</h3>
+                                    <p>Comments can help identify the purpose of a specific block of code, making it easier to find and fix bugs.</p>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-book"></i>
+                                    <h3>Creates Documentation</h3>
+                                    <p>With tools like Javadoc, comments can be used to generate comprehensive code documentation.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="comment-types">
+                            <h2>Types of Comments in Java</h2>
+                            <p>Java supports three types of comments:</p>
+                            
+                            <h3>1. Single-line Comments</h3>
+                            <p>Single-line comments start with <code>//</code> and continue until the end of the line.</p>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// This is a single-line comment
+int age = 25; // This comment is on the same line as code
+                                </pre>
+                            </div>
+                            
+                            <h3>2. Multi-line Comments</h3>
+                            <p>Multi-line comments start with <code>/*</code> and end with <code>*/</code>. Everything between these markers is treated as a comment, even if it spans multiple lines.</p>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+/* This is a
+   multi-line
+   comment */
+   
+/* This is another way to write
+ * a multi-line comment, with asterisks
+ * at the beginning of each line
+ */
+                                </pre>
+                            </div>
+                            
+                            <h3>3. Documentation Comments (Javadoc)</h3>
+                            <p>Documentation comments start with <code>/**</code> and end with <code>*/</code>. They are used to generate documentation using the Javadoc tool.</p>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+/**
+ * This is a Javadoc comment
+ * It is used to describe classes, methods, and fields
+ * 
+ * @author John Doe
+ * @version 1.0
+ */
+public class Calculator {
+    // Class implementation
+}
+                                </pre>
+                            </div>
+                        </section>
+
+                        <section id="javadoc">
+                            <h2>Javadoc Documentation</h2>
+                            <p>Javadoc is a documentation generator for Java that generates HTML documentation from Java source code, based on the documentation comments. Here's how to use it effectively:</p>
+                            
+                            <h3>Javadoc Tags</h3>
+                            <p>Javadoc comments support special tags that start with <code>@</code>. Here are some commonly used tags:</p>
+                            
+                            <div class="tags-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Tag</th>
+                                            <th>Purpose</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>@param</td>
+                                            <td>Documents a method parameter</td>
+                                            <td><code>@param name The name of the user</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@return</td>
+                                            <td>Documents the return value</td>
+                                            <td><code>@return The sum of two numbers</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@throws</td>
+                                            <td>Documents an exception that may be thrown</td>
+                                            <td><code>@throws IOException If the file cannot be read</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@author</td>
+                                            <td>Specifies the author of the class</td>
+                                            <td><code>@author John Doe</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@version</td>
+                                            <td>Indicates the version of the class</td>
+                                            <td><code>@version 1.0</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@see</td>
+                                            <td>Provides a link to another class or method</td>
+                                            <td><code>@see java.util.ArrayList</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@since</td>
+                                            <td>Specifies when this feature was added</td>
+                                            <td><code>@since 1.2</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>@deprecated</td>
+                                            <td>Indicates that this feature is deprecated</td>
+                                            <td><code>@deprecated Use newMethod() instead</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3>Generating Javadoc</h3>
+                            <p>To generate Javadoc documentation, you can use the <code>javadoc</code> command-line tool or your IDE's built-in Javadoc generator:</p>
+                            
+                            <div class="code-snippet">
+                                <span class="language-badge">Command</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+javadoc -d docs src/*.java
+                                </pre>
+                            </div>
+                            
+                            <p>This command generates documentation for all Java files in the <code>src</code> directory and saves it in the <code>docs</code> directory.</p>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> Note</h4>
+                                <p>Most modern IDEs like IntelliJ IDEA and Eclipse provide convenient ways to generate Javadoc. For example, in IntelliJ IDEA, you can go to Tools > Generate JavaDoc.</p>
+                            </div>
+                        </section>
+
+                        <section id="best-practices">
+                            <h2>Best Practices for Commenting</h2>
+                            <p>Follow these guidelines to write effective comments:</p>
+                            
+                            <div class="best-practices">
+                                <div class="practice-item">
+                                    <h3><i class="fas fa-check-circle"></i> Write Clear and Concise Comments</h3>
+                                    <p>Comments should be clear, concise, and add value. Avoid stating the obvious.</p>
+                                    <div class="example-comparison">
+                                        <div class="bad-example">
+                                            <h4>Poor Example:</h4>
+                                            <pre>// Increment i by 1
+i++;</pre>
+                                        </div>
+                                        <div class="good-example">
+                                            <h4>Better Example:</h4>
+                                            <pre>// Move to the next student in the array
+i++;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-item">
+                                    <h3><i class="fas fa-check-circle"></i> Comment Why, Not What</h3>
+                                    <p>Good comments explain why something is done, not what is being done (the code itself shows what is being done).</p>
+                                    <div class="example-comparison">
+                                        <div class="bad-example">
+                                            <h4>Poor Example:</h4>
+                                            <pre>// Setting count to zero
+count = 0;</pre>
+                                        </div>
+                                        <div class="good-example">
+                                            <h4>Better Example:</h4>
+                                            <pre>// Reset counter before processing new batch
+count = 0;</pre>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-item">
+                                    <h3><i class="fas fa-check-circle"></i> Document Public APIs with Javadoc</h3>
+                                    <p>All public classes, methods, and fields should be documented with Javadoc comments, especially if your code will be used by other developers.</p>
+                                </div>
+                                
+                                <div class="practice-item">
+                                    <h3><i class="fas fa-check-circle"></i> Keep Comments Updated</h3>
+                                    <p>When you change code, update the comments to reflect those changes. Outdated comments are misleading and can cause confusion.</p>
+                                </div>
+                                
+                                <div class="practice-item">
+                                    <h3><i class="fas fa-check-circle"></i> Use Comments for TODOs</h3>
+                                    <p>Use <code>// TODO:</code> comments to mark code that needs further attention or improvement. Most IDEs recognize this format and can track these items.</p>
+                                    <pre>// TODO: Implement input validation here</pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="examples">
+                            <h2>Comprehensive Examples</h2>
+                            <p>Let's look at some comprehensive examples of well-commented Java code:</p>
+                            
+                            <h3>Example 1: A Well-Documented Class</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+/**
+ * A simple calculator class that provides basic arithmetic operations.
+ * 
+ * This class demonstrates proper documentation using Javadoc comments.
+ * 
+ * @author John Doe
+ * @version 1.0
+ * @since 2023-01-01
+ */
+public class Calculator {
+    
+    /**
+     * Adds two integers and returns the result.
+     * 
+     * @param a The first integer to add
+     * @param b The second integer to add
+     * @return The sum of the two integers
+     */
+    public int add(int a, int b) {
+        return a + b;
+    }
+    
+    /**
+     * Subtracts the second integer from the first and returns the result.
+     * 
+     * @param a The integer to subtract from
+     * @param b The integer to subtract
+     * @return The difference between a and b
+     */
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+    
+    /**
+     * Divides the first integer by the second and returns the result.
+     * 
+     * @param a The dividend
+     * @param b The divisor
+     * @return The quotient of a divided by b
+     * @throws ArithmeticException If the divisor is zero
+     */
+    public double divide(int a, int b) {
+        // Check for division by zero
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        
+        return (double) a / b;
+    }
+}
+                                </pre>
+                            </div>
+                            
+                            <h3>Example 2: Using Comments to Explain Complex Logic</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+public class SortingExample {
+    
+    /**
+     * Implements the quicksort algorithm to sort an array.
+     * 
+     * @param arr The array to be sorted
+     * @param low The starting index
+     * @param high The ending index
+     */
+    public void quickSort(int[] arr, int low, int high) {
+        if (low < high) {
+            /* 
+             * Partitioning: This is the key step in quicksort.
+             * We select a pivot element and place it in its correct position
+             * such that all elements less than the pivot are to the left
+             * and all elements greater than the pivot are to the right.
+             */
+            int pivotIndex = partition(arr, low, high);
+            
+            // Recursively sort elements before and after the pivot
+            quickSort(arr, low, pivotIndex - 1);
+            quickSort(arr, pivotIndex + 1, high);
+        }
+    }
+    
+    /**
+     * Helper method for quickSort that partitions the array.
+     * 
+     * @param arr The array to be partitioned
+     * @param low The starting index
+     * @param high The ending index (pivot element)
+     * @return The index of the pivot element after partitioning
+     */
+    private int partition(int[] arr, int low, int high) {
+        // We use the rightmost element as the pivot
+        int pivot = arr[high];
+        
+        // Index of smaller element
+        int i = (low - 1);
+        
+        // Move through the array and place elements
+        // smaller than the pivot to the left
+        for (int j = low; j < high; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                
+                // Swap elements
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        
+        // Place the pivot element in its correct position
+        int temp = arr[i + 1];
+        arr[i + 1] = arr[high];
+        arr[high] = temp;
+        
+        return i + 1;
+    }
+}
+                                </pre>
+                            </div>
+                        </section>
+
+                        <div class="interactive-element">
+                            <h3>Check Your Understanding</h3>
+                            <div class="quiz-container mini-quiz">
+                                <div class="quiz-question active">
+                                    <h3>Which of the following is a valid Javadoc comment?</h3>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option">// This is a Javadoc comment</div>
+                                        <div class="quiz-option">/* This is a Javadoc comment */</div>
+                                        <div class="quiz-option" data-correct="true">/** This is a Javadoc comment */</div>
+                                        <div class="quiz-option">/*** This is a Javadoc comment ***/</div>
+                                    </div>
+                                </div>
+                                <div class="quiz-results" style="display: none;"></div>
+                                <div class="quiz-navigation">
+                                    <button class="btn-primary quiz-submit">Submit Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playground-container">
+                            <div class="playground-header">
+                                <div class="playground-tabs">
+                                    <div class="playground-tab active">CommentDemo.java</div>
+                                </div>
+                                <div class="playground-action">
+                                    <button class="run-button">Run Code</button>
+                                    <button class="reset-button">Reset</button>
+                                </div>
+                            </div>
+                            <div class="playground-editor">/**
+ * This class demonstrates different types of comments in Java.
+ * 
+ * @author JavaMaster Student
+ * @version 1.0
+ */
+public class CommentDemo {
+    
+    /**
+     * The main method that runs when the program starts.
+     * 
+     * @param args Command-line arguments (not used in this example)
+     */
+    public static void main(String[] args) {
+        // This is a single-line comment
+        System.out.println("Welcome to the comment demonstration!");
+        
+        /* This is a
+           multi-line comment */
+        
+        // Try adding your own comments below!
+        
+    }
+}</div>
+                            <div class="playground-output"></div>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>Comments are essential for making your code readable and maintainable.</li>
+                                <li>Java supports three types of comments: single-line (<code>//</code>), multi-line (<code>/* */</code>), and Javadoc (<code>/** */</code>).</li>
+                                <li>Javadoc comments can be processed by the Javadoc tool to generate HTML documentation.</li>
+                                <li>Good comments explain why something is done, not what is being done.</li>
+                                <li>Keep comments updated when you change code to avoid confusion.</li>
+                                <li>Use <code>// TODO:</code> comments to mark areas that need future improvement.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <a href="syntax.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Previous Lesson</a>
+                            <a href="../tracks.html#beginner" class="btn-primary">Complete Module <i class="fas fa-check-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Mark this lesson as completed when the user reaches the end
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track progress when user scrolls to the bottom of the lesson
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                    trackProgress('b1-5', 'beginner');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

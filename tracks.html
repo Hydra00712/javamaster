@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Tracks - JavaMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Java Learning Tracks</h1>
+            <p>Choose your learning path based on your experience level. Each track is designed to build your Java skills progressively.</p>
+        </div>
+
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-input" placeholder="Search for topics...">
+            <div class="search-results"></div>
+        </div>
+
+        <section id="beginner" class="track-section">
+            <div class="track-header beginner">
+                <h2>Beginner Track</h2>
+                <p>Perfect for newcomers to programming or Java</p>
+            </div>
+
+            <div class="track-modules">
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-book"></i> Module 1: Java Fundamentals</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="beginner/introduction.html" class="lesson-link" data-lesson-id="b1-1">Introduction to Java</a></li>
+                            <li><a href="beginner/setup.html" class="lesson-link" data-lesson-id="b1-2">Setting Up Your Development Environment</a></li>
+                            <li><a href="beginner/first-program.html" class="lesson-link" data-lesson-id="b1-3">Your First Java Program</a></li>
+                            <li><a href="beginner/syntax.html" class="lesson-link" data-lesson-id="b1-4">Java Syntax Basics</a></li>
+                            <li><a href="beginner/comments.html" class="lesson-link" data-lesson-id="b1-5">Comments and Documentation</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="beginner/quiz-fundamentals.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-cube"></i> Module 2: Variables and Data Types</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="beginner/variables.html" class="lesson-link" data-lesson-id="b2-1">Variables and Constants</a></li>
+                            <li><a href="beginner/primitive-types.html" class="lesson-link" data-lesson-id="b2-2">Primitive Data Types</a></li>
+                            <li><a href="beginner/reference-types.html" class="lesson-link" data-lesson-id="b2-3">Reference Data Types</a></li>
+                            <li><a href="beginner/type-casting.html" class="lesson-link" data-lesson-id="b2-4">Type Casting and Conversion</a></li>
+                            <li><a href="beginner/operators.html" class="lesson-link" data-lesson-id="b2-5">Operators in Java</a></li>
+                            <li><a href="beginner/strings.html" class="lesson-link" data-lesson-id="b2-6">Working with Strings</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="beginner/quiz-variables.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-code-branch"></i> Module 3: Control Flow</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="beginner/if-else.html" class="lesson-link" data-lesson-id="b3-1">Conditional Statements (if-else)</a></li>
+                            <li><a href="beginner/switch.html" class="lesson-link" data-lesson-id="b3-2">Switch Statements</a></li>
+                            <li><a href="beginner/loops.html" class="lesson-link" data-lesson-id="b3-3">Loops (for, while, do-while)</a></li>
+                            <li><a href="beginner/break-continue.html" class="lesson-link" data-lesson-id="b3-4">Break and Continue</a></li>
+                            <li><a href="beginner/control-flow-project.html" class="lesson-link" data-lesson-id="b3-5">Mini-Project: Number Guessing Game</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="beginner/quiz-control-flow.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-th"></i> Module 4: Arrays and Methods</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="beginner/arrays.html" class="lesson-link" data-lesson-id="b4-1">Introduction to Arrays</a></li>
+                            <li><a href="beginner/multidimensional-arrays.html" class="lesson-link" data-lesson-id="b4-2">Multidimensional Arrays</a></li>
+                            <li><a href="beginner/methods.html" class="lesson-link" data-lesson-id="b4-3">Methods in Java</a></li>
+                            <li><a href="beginner/method-parameters.html" class="lesson-link" data-lesson-id="b4-4">Method Parameters and Return Types</a></li>
+                            <li><a href="beginner/method-overloading.html" class="lesson-link" data-lesson-id="b4-5">Method Overloading</a></li>
+                            <li><a href="beginner/arrays-methods-project.html" class="lesson-link" data-lesson-id="b4-6">Mini-Project: Simple Calculator</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="beginner/quiz-arrays-methods.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-object-group"></i> Module 5: Object-Oriented Programming Basics</h3>
+                        <span class="module-lessons">7 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="beginner/oop-intro.html" class="lesson-link" data-lesson-id="b5-1">Introduction to OOP Concepts</a></li>
+                            <li><a href="beginner/classes-objects.html" class="lesson-link" data-lesson-id="b5-2">Classes and Objects</a></li>
+                            <li><a href="beginner/constructors.html" class="lesson-link" data-lesson-id="b5-3">Constructors</a></li>
+                            <li><a href="beginner/encapsulation.html" class="lesson-link" data-lesson-id="b5-4">Encapsulation and Access Modifiers</a></li>
+                            <li><a href="beginner/this-keyword.html" class="lesson-link" data-lesson-id="b5-5">The 'this' Keyword</a></li>
+                            <li><a href="beginner/static.html" class="lesson-link" data-lesson-id="b5-6">Static Variables and Methods</a></li>
+                            <li><a href="beginner/oop-project.html" class="lesson-link" data-lesson-id="b5-7">Project: Student Management System</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="beginner/quiz-oop-basics.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intermediate" class="track-section">
+            <div class="track-header intermediate">
+                <h2>Intermediate Track</h2>
+                <p>For those with basic Java knowledge</p>
+            </div>
+
+            <div class="track-modules">
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-project-diagram"></i> Module 1: Advanced OOP Concepts</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="intermediate/inheritance.html" class="lesson-link" data-lesson-id="i1-1">Inheritance</a></li>
+                            <li><a href="intermediate/polymorphism.html" class="lesson-link" data-lesson-id="i1-2">Polymorphism</a></li>
+                            <li><a href="intermediate/abstraction.html" class="lesson-link" data-lesson-id="i1-3">Abstraction and Abstract Classes</a></li>
+                            <li><a href="intermediate/interfaces.html" class="lesson-link" data-lesson-id="i1-4">Interfaces</a></li>
+                            <li><a href="intermediate/packages.html" class="lesson-link" data-lesson-id="i1-5">Packages and Import Statements</a></li>
+                            <li><a href="intermediate/advanced-oop-project.html" class="lesson-link" data-lesson-id="i1-6">Project: Banking System</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="intermediate/quiz-advanced-oop.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-list-alt"></i> Module 2: Collections Framework</h3>
+                        <span class="module-lessons">7 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="intermediate/collections-intro.html" class="lesson-link" data-lesson-id="i2-1">Introduction to Collections</a></li>
+                            <li><a href="intermediate/lists.html" class="lesson-link" data-lesson-id="i2-2">Lists (ArrayList, LinkedList)</a></li>
+                            <li><a href="intermediate/sets.html" class="lesson-link" data-lesson-id="i2-3">Sets (HashSet, TreeSet)</a></li>
+                            <li><a href="intermediate/maps.html" class="lesson-link" data-lesson-id="i2-4">Maps (HashMap, TreeMap)</a></li>
+                            <li><a href="intermediate/queues.html" class="lesson-link" data-lesson-id="i2-5">Queues and Deques</a></li>
+                            <li><a href="intermediate/iterators.html" class="lesson-link" data-lesson-id="i2-6">Iterators and Enhanced For Loop</a></li>
+                            <li><a href="intermediate/collections-project.html" class="lesson-link" data-lesson-id="i2-7">Project: Library Management System</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="intermediate/quiz-collections.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Module 3: Exception Handling</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="intermediate/exceptions-intro.html" class="lesson-link" data-lesson-id="i3-1">Introduction to Exceptions</a></li>
+                            <li><a href="intermediate/try-catch.html" class="lesson-link" data-lesson-id="i3-2">Try-Catch Blocks</a></li>
+                            <li><a href="intermediate/multiple-exceptions.html" class="lesson-link" data-lesson-id="i3-3">Handling Multiple Exceptions</a></li>
+                            <li><a href="intermediate/throw-throws.html" class="lesson-link" data-lesson-id="i3-4">Throw and Throws Keywords</a></li>
+                            <li><a href="intermediate/custom-exceptions.html" class="lesson-link" data-lesson-id="i3-5">Creating Custom Exceptions</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="intermediate/quiz-exceptions.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-file-alt"></i> Module 4: File I/O and Serialization</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="intermediate/file-io-intro.html" class="lesson-link" data-lesson-id="i4-1">Introduction to File I/O</a></li>
+                            <li><a href="intermediate/file-streams.html" class="lesson-link" data-lesson-id="i4-2">File Streams</a></li>
+                            <li><a href="intermediate/readers-writers.html" class="lesson-link" data-lesson-id="i4-3">Readers and Writers</a></li>
+                            <li><a href="intermediate/nio.html" class="lesson-link" data-lesson-id="i4-4">Java NIO</a></li>
+                            <li><a href="intermediate/serialization.html" class="lesson-link" data-lesson-id="i4-5">Object Serialization</a></li>
+                            <li><a href="intermediate/file-io-project.html" class="lesson-link" data-lesson-id="i4-6">Project: Contact Manager with Persistence</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="intermediate/quiz-file-io.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-random"></i> Module 5: Multithreading Basics</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="intermediate/threads-intro.html" class="lesson-link" data-lesson-id="i5-1">Introduction to Threads</a></li>
+                            <li><a href="intermediate/creating-threads.html" class="lesson-link" data-lesson-id="i5-2">Creating and Starting Threads</a></li>
+                            <li><a href="intermediate/thread-lifecycle.html" class="lesson-link" data-lesson-id="i5-3">Thread Lifecycle</a></li>
+                            <li><a href="intermediate/thread-synchronization.html" class="lesson-link" data-lesson-id="i5-4">Thread Synchronization</a></li>
+                            <li><a href="intermediate/threading-project.html" class="lesson-link" data-lesson-id="i5-5">Project: Multithreaded Download Manager</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="intermediate/quiz-threading.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="professional" class="track-section">
+            <div class="track-header professional">
+                <h2>Professional Track</h2>
+                <p>Master advanced Java concepts</p>
+            </div>
+
+            <div class="track-modules">
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-sitemap"></i> Module 1: Design Patterns</h3>
+                        <span class="module-lessons">7 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="professional/design-patterns-intro.html" class="lesson-link" data-lesson-id="p1-1">Introduction to Design Patterns</a></li>
+                            <li><a href="professional/singleton.html" class="lesson-link" data-lesson-id="p1-2">Singleton Pattern</a></li>
+                            <li><a href="professional/factory.html" class="lesson-link" data-lesson-id="p1-3">Factory Pattern</a></li>
+                            <li><a href="professional/observer.html" class="lesson-link" data-lesson-id="p1-4">Observer Pattern</a></li>
+                            <li><a href="professional/strategy.html" class="lesson-link" data-lesson-id="p1-5">Strategy Pattern</a></li>
+                            <li><a href="professional/decorator.html" class="lesson-link" data-lesson-id="p1-6">Decorator Pattern</a></li>
+                            <li><a href="professional/design-patterns-project.html" class="lesson-link" data-lesson-id="p1-7">Project: E-commerce System</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="professional/quiz-design-patterns.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-cogs"></i> Module 2: Advanced Multithreading</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="professional/concurrency-api.html" class="lesson-link" data-lesson-id="p2-1">Java Concurrency API</a></li>
+                            <li><a href="professional/executors.html" class="lesson-link" data-lesson-id="p2-2">Executors and Thread Pools</a></li>
+                            <li><a href="professional/futures.html" class="lesson-link" data-lesson-id="p2-3">Futures and CompletableFuture</a></li>
+                            <li><a href="professional/concurrent-collections.html" class="lesson-link" data-lesson-id="p2-4">Concurrent Collections</a></li>
+                            <li><a href="professional/locks.html" class="lesson-link" data-lesson-id="p2-5">Locks and Atomic Variables</a></li>
+                            <li><a href="professional/concurrency-project.html" class="lesson-link" data-lesson-id="p2-6">Project: Web Crawler</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="professional/quiz-concurrency.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-network-wired"></i> Module 3: Network Programming</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="professional/networking-basics.html" class="lesson-link" data-lesson-id="p3-1">Java Networking Basics</a></li>
+                            <li><a href="professional/sockets.html" class="lesson-link" data-lesson-id="p3-2">Socket Programming</a></li>
+                            <li><a href="professional/url-connection.html" class="lesson-link" data-lesson-id="p3-3">URL and URLConnection</a></li>
+                            <li><a href="professional/http-client.html" class="lesson-link" data-lesson-id="p3-4">HTTP Client API</a></li>
+                            <li><a href="professional/networking-project.html" class="lesson-link" data-lesson-id="p3-5">Project: Chat Application</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="professional/quiz-networking.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-database"></i> Module 4: Database Connectivity (JDBC)</h3>
+                        <span class="module-lessons">6 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="professional/jdbc-intro.html" class="lesson-link" data-lesson-id="p4-1">Introduction to JDBC</a></li>
+                            <li><a href="professional/jdbc-connection.html" class="lesson-link" data-lesson-id="p4-2">Establishing Database Connections</a></li>
+                            <li><a href="professional/jdbc-statements.html" class="lesson-link" data-lesson-id="p4-3">JDBC Statements</a></li>
+                            <li><a href="professional/prepared-statements.html" class="lesson-link" data-lesson-id="p4-4">Prepared Statements</a></li>
+                            <li><a href="professional/transactions.html" class="lesson-link" data-lesson-id="p4-5">Transaction Management</a></li>
+                            <li><a href="professional/jdbc-project.html" class="lesson-link" data-lesson-id="p4-6">Project: Inventory Management System</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="professional/quiz-jdbc.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-header">
+                        <h3><i class="fas fa-cubes"></i> Module 5: Java Frameworks Overview</h3>
+                        <span class="module-lessons">5 lessons</span>
+                    </div>
+                    <div class="module-content">
+                        <ul class="lesson-list">
+                            <li><a href="professional/spring-intro.html" class="lesson-link" data-lesson-id="p5-1">Introduction to Spring Framework</a></li>
+                            <li><a href="professional/hibernate-intro.html" class="lesson-link" data-lesson-id="p5-2">Introduction to Hibernate</a></li>
+                            <li><a href="professional/spring-boot.html" class="lesson-link" data-lesson-id="p5-3">Spring Boot Basics</a></li>
+                            <li><a href="professional/rest-api.html" class="lesson-link" data-lesson-id="p5-4">Building RESTful APIs</a></li>
+                            <li><a href="professional/frameworks-project.html" class="lesson-link" data-lesson-id="p5-5">Project: Task Management API</a></li>
+                        </ul>
+                        <div class="module-quiz">
+                            <a href="professional/quiz-frameworks.html" class="btn-quiz">Take Module Quiz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tracks.html">Learning Tracks</a></li>
+                    <li><a href="practice.html">Practice</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

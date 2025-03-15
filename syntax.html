@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Syntax Basics - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Java Syntax Basics</h1>
+            <p>Learn the fundamental syntactical elements of the Java programming language.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%;"></div>
+        </div>
+
+        <div class="lesson-container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="topic-nav">
+                        <h3>Module 1: Java Fundamentals</h3>
+                        <ul>
+                            <li><a href="introduction.html">Introduction to Java</a></li>
+                            <li><a href="setup.html">Setting Up Your Development Environment</a></li>
+                            <li><a href="first-program.html">Your First Java Program</a></li>
+                            <li><a href="syntax.html" class="active">Java Syntax Basics</a></li>
+                            <li><a href="comments.html">Comments and Documentation</a></li>
+                        </ul>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#variables">Variables and Data Types</a></li>
+                            <li><a href="#operators">Operators</a></li>
+                            <li><a href="#control-flow">Control Flow Statements</a></li>
+                            <li><a href="#arrays">Arrays</a></li>
+                            <li><a href="#naming">Naming Conventions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="lesson-content">
+                        <section id="variables">
+                            <h2>Variables and Data Types</h2>
+                            <p>In Java, a variable is a container that holds a value during the execution of a program. Before using a variable, you need to declare it with a specific data type.</p>
+                            
+                            <h3>Primitive Data Types</h3>
+                            <p>Java has eight primitive data types:</p>
+                            
+                            <div class="data-types-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Data Type</th>
+                                            <th>Size</th>
+                                            <th>Range</th>
+                                            <th>Default Value</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>byte</td>
+                                            <td>8 bits</td>
+                                            <td>-128 to 127</td>
+                                            <td>0</td>
+                                            <td><code>byte b = 10;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>short</td>
+                                            <td>16 bits</td>
+                                            <td>-32,768 to 32,767</td>
+                                            <td>0</td>
+                                            <td><code>short s = 1000;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>int</td>
+                                            <td>32 bits</td>
+                                            <td>-2^31 to 2^31-1</td>
+                                            <td>0</td>
+                                            <td><code>int i = 100000;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>long</td>
+                                            <td>64 bits</td>
+                                            <td>-2^63 to 2^63-1</td>
+                                            <td>0L</td>
+                                            <td><code>long l = 100000L;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>float</td>
+                                            <td>32 bits</td>
+                                            <td>±3.4e−038 to ±3.4e+038</td>
+                                            <td>0.0f</td>
+                                            <td><code>float f = 3.14f;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>double</td>
+                                            <td>64 bits</td>
+                                            <td>±1.7e−308 to ±1.7e+308</td>
+                                            <td>0.0d</td>
+                                            <td><code>double d = 3.14159;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>char</td>
+                                            <td>16 bits</td>
+                                            <td>0 to 65,535</td>
+                                            <td>'\u0000'</td>
+                                            <td><code>char c = 'A';</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>boolean</td>
+                                            <td>1 bit</td>
+                                            <td>true or false</td>
+                                            <td>false</td>
+                                            <td><code>boolean b = true;</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3>Reference Data Types</h3>
+                            <p>Reference data types are used to access objects. Examples include:</p>
+                            <ul>
+                                <li>Classes (e.g., <code>String</code>, <code>Scanner</code>)</li>
+                                <li>Interfaces</li>
+                                <li>Arrays</li>
+                            </ul>
+                            
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// Primitive data types
+int age = 25;
+double salary = 50000.50;
+char grade = 'A';
+boolean isStudent = true;
+
+// Reference data types
+String name = "John Doe";
+int[] numbers = {1, 2, 3, 4, 5};
+                                </pre>
+                            </div>
+                        </section>
+
+                        <section id="operators">
+                            <h2>Operators</h2>
+                            <p>Java provides a rich set of operators for manipulating variables. Here are the main categories:</p>
+                            
+                            <h3>Arithmetic Operators</h3>
+                            <div class="operators-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Description</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>+</td>
+                                            <td>Addition</td>
+                                            <td><code>int sum = a + b;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>Subtraction</td>
+                                            <td><code>int diff = a - b;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>*</td>
+                                            <td>Multiplication</td>
+                                            <td><code>int product = a * b;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>/</td>
+                                            <td>Division</td>
+                                            <td><code>int quotient = a / b;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>%</td>
+                                            <td>Modulus (remainder)</td>
+                                            <td><code>int remainder = a % b;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>++</td>
+                                            <td>Increment</td>
+                                            <td><code>a++; or ++a;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>--</td>
+                                            <td>Decrement</td>
+                                            <td><code>a--; or --a;</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3>Comparison Operators</h3>
+                            <div class="operators-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Description</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>==</td>
+                                            <td>Equal to</td>
+                                            <td><code>if (a == b) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>!=</td>
+                                            <td>Not equal to</td>
+                                            <td><code>if (a != b) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>></td>
+                                            <td>Greater than</td>
+                                            <td><code>if (a > b) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><</td>
+                                            <td>Less than</td>
+                                            <td><code>if (a < b) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>>=</td>
+                                            <td>Greater than or equal to</td>
+                                            <td><code>if (a >= b) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><=</td>
+                                            <td>Less than or equal to</td>
+                                            <td><code>if (a <= b) {...}</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3>Logical Operators</h3>
+                            <div class="operators-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Description</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>&&</td>
+                                            <td>Logical AND</td>
+                                            <td><code>if (a > 0 && b > 0) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>||</td>
+                                            <td>Logical OR</td>
+                                            <td><code>if (a > 0 || b > 0) {...}</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>!</td>
+                                            <td>Logical NOT</td>
+                                            <td><code>if (!isTrue) {...}</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <h3>Assignment Operators</h3>
+                            <div class="operators-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Operator</th>
+                                            <th>Description</th>
+                                            <th>Example</th>
+                                            <th>Equivalent to</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>=</td>
+                                            <td>Simple assignment</td>
+                                            <td><code>a = 5;</code></td>
+                                            <td>N/A</td>
+                                        </tr>
+                                        <tr>
+                                            <td>+=</td>
+                                            <td>Add and assign</td>
+                                            <td><code>a += 5;</code></td>
+                                            <td><code>a = a + 5;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>-=</td>
+                                            <td>Subtract and assign</td>
+                                            <td><code>a -= 5;</code></td>
+                                            <td><code>a = a - 5;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>*=</td>
+                                            <td>Multiply and assign</td>
+                                            <td><code>a *= 5;</code></td>
+                                            <td><code>a = a * 5;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>/=</td>
+                                            <td>Divide and assign</td>
+                                            <td><code>a /= 5;</code></td>
+                                            <td><code>a = a / 5;</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>%=</td>
+                                            <td>Modulus and assign</td>
+                                            <td><code>a %= 5;</code></td>
+                                            <td><code>a = a % 5;</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section id="control-flow">
+                            <h2>Control Flow Statements</h2>
+                            <p>Control flow statements are used to control the execution flow of a program.</p>
+                            
+                            <h3>Conditional Statements</h3>
+                            <p>Conditional statements allow you to execute different blocks of code based on different conditions.</p>
+                            
+                            <h4>If Statement</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+if (condition) {
+    // code to be executed if condition is true
+}
+                                </pre>
+                            </div>
+                            
+                            <h4>If-Else Statement</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+if (condition) {
+    // code to be executed if condition is true
+} else {
+    // code to be executed if condition is false
+}
+                                </pre>
+                            </div>
+                            
+                            <h4>If-Else-If Ladder</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+if (condition1) {
+    // code to be executed if condition1 is true
+} else if (condition2) {
+    // code to be executed if condition2 is true
+} else {
+    // code to be executed if both conditions are false
+}
+                                </pre>
+                            </div>
+                            
+                            <h4>Switch Statement</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+switch (expression) {
+    case value1:
+        // code to be executed if expression equals value1
+        break;
+    case value2:
+        // code to be executed if expression equals value2
+        break;
+    default:
+        // code to be executed if expression doesn't match any case
+}
+                                </pre>
+                            </div>
+                            
+                            <h3>Looping Statements</h3>
+                            <p>Looping statements allow you to execute a block of code repeatedly.</p>
+                            
+                            <h4>For Loop</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+for (initialization; condition; update) {
+    // code to be executed
+}
+
+// Example
+for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+                                </pre>
+                            </div>
+                            
+                            <h4>While Loop</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+while (condition) {
+    // code to be executed
+}
+
+// Example
+int i = 0;
+while (i < 5) {
+    System.out.println(i);
+    i++;
+}
+                                </pre>
+                            </div>
+                            
+                            <h4>Do-While Loop</h4>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+do {
+    // code to be executed
+} while (condition);
+
+// Example
+int i = 0;
+do {
+    System.out.println(i);
+    i++;
+} while (i < 5);
+                                </pre>
+                            </div>
+                            
+                            <h3>Jump Statements</h3>
+                            <p>Jump statements are used to transfer control to another part of the program.</p>
+                            
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// break - terminates the loop or switch statement
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // exits the loop when i equals 5
+    }
+    System.out.println(i);
+}
+
+// continue - skips the current iteration and continues with the next
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        continue; // skips printing when i equals 5
+    }
+    System.out.println(i);
+}
+
+// return - exits from a method
+public int add(int a, int b) {
+    return a + b; // returns the sum and exits the method
+}
+                                </pre>
+                            </div>
+                        </section>
+
+                        <section id="arrays">
+                            <h2>Arrays</h2>
+                            <p>An array is a container object that holds a fixed number of values of a single type. The length of an array is determined when it is created and cannot be changed.</p>
+                            
+                            <h3>Declaring and Creating Arrays</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// Declaration
+int[] numbers; // preferred syntax
+int numbers[]; // alternative syntax
+
+// Creation
+numbers = new int[5]; // creates an array that can hold 5 integers
+
+// Declaration and creation in one step
+int[] numbers = new int[5];
+
+// Declaration, creation, and initialization in one step
+int[] numbers = {1, 2, 3, 4, 5};
+                                </pre>
+                            </div>
+                            
+                            <h3>Accessing Array Elements</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+int[] numbers = {1, 2, 3, 4, 5};
+
+// Accessing elements (index starts from 0)
+int firstElement = numbers[0]; // 1
+int thirdElement = numbers[2]; // 3
+
+// Modifying elements
+numbers[1] = 10; // changes the second element to 10
+
+// Array length
+int length = numbers.length; // 5
+                                </pre>
+                            </div>
+                            
+                            <h3>Iterating Through Arrays</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+int[] numbers = {1, 2, 3, 4, 5};
+
+// Using for loop
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println(numbers[i]);
+}
+
+// Using enhanced for loop (foreach)
+for (int number : numbers) {
+    System.out.println(number);
+}
+                                </pre>
+                            </div>
+                            
+                            <h3>Multidimensional Arrays</h3>
+                            <div class="code-snippet">
+                                <span class="language-badge">Java</span>
+                                <button class="copy-button">Copy</button>
+                                <pre>
+// 2D array declaration and creation
+int[][] matrix = new int[3][3];
+
+// 2D array initialization
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Accessing elements in a 2D array
+int element = matrix[1][2]; // row 1, column 2 (value: 6)
+
+// Iterating through a 2D array
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+                                </pre>
+                            </div>
+                        </section>
+
+                        <section id="naming">
+                            <h2>Naming Conventions</h2>
+                            <p>Java has established naming conventions that enhance code readability and maintainability.</p>
+                            
+                            <div class="naming-conventions">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Element</th>
+                                            <th>Convention</th>
+                                            <th>Example</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Classes</td>
+                                            <td>Start with uppercase, use camelCase</td>
+                                            <td><code>MyClass</code>, <code>StudentInfo</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Methods</td>
+                                            <td>Start with lowercase, use camelCase</td>
+                                            <td><code>calculateTotal()</code>, <code>getName()</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Variables</td>
+                                            <td>Start with lowercase, use camelCase</td>
+                                            <td><code>firstName</code>, <code>totalAmount</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Constants</td>
+                                            <td>All uppercase, words separated by underscore</td>
+                                            <td><code>MAX_VALUE</code>, <code>PI</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Packages</td>
+                                            <td>All lowercase, domain name reversed</td>
+                                            <td><code>com.example.project</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4><i class="fas fa-info-circle"></i> Good Practices</h4>
+                                <ul>
+                                    <li>Choose meaningful and descriptive names.</li>
+                                    <li>Avoid using abbreviations that aren't widely understood.</li>
+                                    <li>Keep names reasonably short but descriptive.</li>
+                                    <li>Don't use reserved keywords as names.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <div class="interactive-element">
+                            <h3>Check Your Understanding</h3>
+                            <div class="quiz-container mini-quiz">
+                                <div class="quiz-question active">
+                                    <h3>Which of the following is a valid variable declaration in Java?</h3>
+                                    <div class="quiz-options">
+                                        <div class="quiz-option">int 1number = 10;</div>
+                                        <div class="quiz-option" data-correct="true">double salary = 1000.50;</div>
+                                        <div class="quiz-option">String @name = "John";</div>
+                                        <div class="quiz-option">boolean class = true;</div>
+                                    </div>
+                                </div>
+                                <div class="quiz-results" style="display: none;"></div>
+                                <div class="quiz-navigation">
+                                    <button class="btn-primary quiz-submit">Submit Answer</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="playground-container">
+                            <div class="playground-header">
+                                <div class="playground-tabs">
+                                    <div class="playground-tab active">SyntaxDemo.java</div>
+                                </div>
+                                <div class="playground-action">
+                                    <button class="run-button">Run Code</button>
+                                    <button class="reset-button">Reset</button>
+                                </div>
+                            </div>
+                            <div class="playground-editor">public class SyntaxDemo {
+    public static void main(String[] args) {
+        // Variables
+        int age = 25;
+        double height = 1.75;
+        boolean isStudent = true;
+        String name = "John Doe";
+        
+        // Control flow
+        if (age < 18) {
+            System.out.println(name + " is a minor.");
+        } else {
+            System.out.println(name + " is an adult.");
+        }
+        
+        // Loop
+        System.out.println("Counting from 1 to 5:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+        
+        // Try modifying this code to experiment with Java syntax!
+    }
+}</div>
+                            <div class="playground-output"></div>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Key Takeaways</h3>
+                            <ul>
+                                <li>Java has eight primitive data types: byte, short, int, long, float, double, char, and boolean.</li>
+                                <li>Reference data types are used to access objects such as classes, interfaces, and arrays.</li>
+                                <li>Java provides various operators: arithmetic, comparison, logical, and assignment.</li>
+                                <li>Control flow statements include conditional statements (if, if-else, switch) and loops (for, while, do-while).</li>
+                                <li>Arrays are fixed-size containers that hold values of the same type, with index starting from 0.</li>
+                                <li>Following Java naming conventions improves code readability and maintainability.</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <a href="first-program.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Previous Lesson</a>
+                            <a href="comments.html" class="btn-primary">Next Lesson: Comments and Documentation <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Mark this lesson as completed when the user reaches the end
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track progress when user scrolls to the bottom of the lesson
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200) {
+                    trackProgress('b1-4', 'beginner');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

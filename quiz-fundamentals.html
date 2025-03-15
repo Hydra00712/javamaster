@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Fundamentals Quiz - JavaMaster</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Java<span>Master</span></h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../tracks.html" class="active">Learning Tracks</a></li>
+            <li><a href="../practice.html">Practice</a></li>
+            <li><a href="../resources.html">Resources</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-login">Log In</button>
+            <button class="btn-signup">Sign Up</button>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="content-page">
+        <div class="content-header">
+            <h1>Java Fundamentals Quiz</h1>
+            <p>Test your knowledge of Java fundamentals with this quiz.</p>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 100%;"></div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>Module 1: Java Fundamentals</h2>
+                <p>Answer all questions to complete this quiz. You can retake the quiz as many times as you want.</p>
+            </div>
+
+            <div class="quiz-question">
+                <h3>1. What is Java?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">A high-level, object-oriented programming language</div>
+                    <div class="quiz-option">A markup language for web development</div>
+                    <div class="quiz-option">A database management system</div>
+                    <div class="quiz-option">A hardware component in computers</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>2. Who developed Java?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">James Gosling at Sun Microsystems</div>
+                    <div class="quiz-option">Bill Gates at Microsoft</div>
+                    <div class="quiz-option">Linus Torvalds</div>
+                    <div class="quiz-option">Mark Zuckerberg at Facebook</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>3. What does JVM stand for?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">Java Virtual Machine</div>
+                    <div class="quiz-option">Java Variable Method</div>
+                    <div class="quiz-option">Java Visual Module</div>
+                    <div class="quiz-option">Java Verified Mechanism</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>4. What is the main advantage of Java's "Write Once, Run Anywhere" feature?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">Java code can run on any platform that has a JVM without recompilation</div>
+                    <div class="quiz-option">Java code only needs to be written once and never updated</div>
+                    <div class="quiz-option">Java applications can only run on one specific platform</div>
+                    <div class="quiz-option">Java code automatically fixes bugs when running on different platforms</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>5. Which of the following is NOT a feature of Java?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">Object-oriented</div>
+                    <div class="quiz-option">Platform-independent</div>
+                    <div class="quiz-option" data-correct="true">Requires manual memory management</div>
+                    <div class="quiz-option">Multithreaded</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>6. What is the correct file extension for Java source files?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option" data-correct="true">.java</div>
+                    <div class="quiz-option">.class</div>
+                    <div class="quiz-option">.js</div>
+                    <div class="quiz-option">.jvm</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>7. What is the correct file extension for compiled Java bytecode files?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">.java</div>
+                    <div class="quiz-option" data-correct="true">.class</div>
+                    <div class="quiz-option">.exe</div>
+                    <div class="quiz-option">.bytecode</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>8. Which command is used to compile a Java program?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">java</div>
+                    <div class="quiz-option" data-correct="true">javac</div>
+                    <div class="quiz-option">compile</div>
+                    <div class="quiz-option">jvm</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>9. Which of the following is a valid comment in Java?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">/* This is a comment</div>
+                    <div class="quiz-option"># This is a comment</div>
+                    <div class="quiz-option" data-correct="true">// This is a comment</div>
+                    <div class="quiz-option">$ This is a comment</div>
+                </div>
+            </div>
+
+            <div class="quiz-question">
+                <h3>10. What is the entry point of a Java application?</h3>
+                <div class="quiz-options">
+                    <div class="quiz-option">start() method</div>
+                    <div class="quiz-option">run() method</div>
+                    <div class="quiz-option" data-correct="true">main() method</div>
+                    <div class="quiz-option">execute() method</div>
+                </div>
+            </div>
+
+            <div class="quiz-results"></div>
+
+            <div class="quiz-navigation">
+                <button class="btn-secondary quiz-next">Next Question</button>
+                <button class="btn-primary quiz-submit" style="display: none;">Submit Quiz</button>
+            </div>
+        </div>
+
+        <div class="lesson-navigation" style="margin-top: 40px;">
+            <a href="../tracks.html#beginner" class="btn-secondary"><i class="fas fa-arrow-left"></i> Back to Module</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Java<span>Master</span></h2>
+                <p>Your complete platform for mastering Java programming.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../tracks.html">Learning Tracks</a></li>
+                    <li><a href="../practice.html">Practice</a></li>
+                    <li><a href="../resources.html">Resources</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../faq.html">FAQ</a></li>
+                    <li><a href="../support.html">Support</a></li>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest content and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 JavaMaster. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html> 
